@@ -137,4 +137,9 @@
    return $classes;
 }
 
+function admin_browser_body_class($classes) {
+	return implode(' ', browser_body_class(explode(' ', $classes)));
+}
+
 add_filter('body_class', 'browser_body_class');
+add_filter('admin_body_class', 'admin_browser_body_class');
