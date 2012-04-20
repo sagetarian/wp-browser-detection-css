@@ -1,6 +1,6 @@
 <?php 
  
- function browser_body_class($classes) {
+function browser_body_class($classes) {
    global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone, $is_firefox_3, $is_windows, $is_linux, $is_mac;
 
    $user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
@@ -143,3 +143,5 @@ function admin_browser_body_class($classes) {
 
 add_filter('body_class', 'browser_body_class');
 add_filter('admin_body_class', 'admin_browser_body_class');
+
+?>
