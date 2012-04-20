@@ -1,6 +1,6 @@
 <?php 
  
-function browser_body_class($classes) {
+function wpdc_browser_body_class($classes) {
    global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone, $is_firefox_3, $is_windows, $is_linux, $is_mac;
 
    $user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
@@ -137,11 +137,11 @@ function browser_body_class($classes) {
    return $classes;
 }
 
-function admin_browser_body_class($classes) {
+function wpdc_admin_browser_body_class($classes) {
 	return implode(' ', browser_body_class(explode(' ', $classes)));
 }
 
-add_filter('body_class', 'browser_body_class');
-add_filter('admin_body_class', 'admin_browser_body_class');
+add_filter('body_class', 'wpdc_browser_body_class');
+add_filter('admin_body_class', 'wpdc_admin_browser_body_class');
 
 ?>
