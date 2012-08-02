@@ -138,7 +138,7 @@ function wpdc_browser_body_class($classes) {
 }
 
 function wpdc_admin_browser_body_class($classes) {
-	return implode(' ', browser_body_class(explode(' ', $classes)));
+	return implode(' ', wpdc_browser_body_class(explode(' ', $classes)));
 }
 
 add_filter('body_class', 'wpdc_browser_body_class');
